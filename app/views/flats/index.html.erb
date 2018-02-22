@@ -1,0 +1,20 @@
+<div class="flexbox">
+<h1>Flats</h1>
+</div>
+<div class="flexbox">
+  <% @flats.each do |flat| %>
+  <div class="flex-item">
+    <div>
+    <h2><%= link_to flat.name, flat_path(flat)%></h2>
+    <p><%= link_to flat.address, flat_path(flat)%></p>
+    <p><%= link_to flat.description, flat_path(flat)%></p>
+    <p><i class="fa fa-euro-sign icon"></i><%= link_to flat.price_per_night, flat_path(flat)%></p>
+    <p><i class="fa fa-user icon"></i><%= link_to flat.number_of_guests, flat_path(flat)%></p>
+    <%#= link_to "edit", edit_flat_path(flat)%>
+  <%#= link_to "Delete", flat_path(flat),
+  method: :delete,
+  data: { confirm: "Are you sure?" } %>
+  <%#= link_to "reviews", flat_reviews_path(flat)%>
+</div>
+<% end %>
+</div>
